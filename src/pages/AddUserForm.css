@@ -1,0 +1,191 @@
+.add-data-form-container {
+  display: flex;
+  min-height: 100vh;
+  margin-top: 60px;
+}
+
+.add-data-form-content {
+  margin-left: 270px;
+  padding: 20px;
+  border-radius: 12px;
+  flex-grow: 1;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.add-data-form-content h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #000;
+}
+
+.add-data-form {
+  display: grid;
+  gap: 20px;
+}
+
+label {
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input-add {
+  width: 100%;
+  height: 2.7rem;
+  padding: 10px;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.input-add:focus {
+  border-color: #B477D9;
+  outline: none;
+  box-shadow: 0 0 0 2px #B477D980;
+}
+
+.button-add-user button {
+  background-color: #B477D9;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.button-add-user button:hover {
+  background-color: #9752c2;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+select:focus {
+  border-color: #B477D9;
+  outline: none;
+  box-shadow: 0 0 0 2px #B477D980;
+}
+
+.add-form-password-toggle-button {
+  position: absolute;
+  cursor: pointer;
+  color: #B477D9;
+  z-index: 10;
+  right: 23%;
+  margin-top: 10px;
+}
+
+.add-form-password-toggle-button svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Gaya umum untuk dropdown autocomplete */
+.add-user-autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%; /* Posisi di bawah input */
+  left: 0;
+  right: 0;
+  background-color: white;
+  max-height: 150px; /* Batasi tinggi dropdown */
+  overflow-y: auto; /* Tambahkan scroll jika diperlukan */
+}
+
+/* Gaya untuk item dalam dropdown */
+.add-user-autocomplete-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Gaya untuk item yang aktif (terpilih) */
+.autocomplete-active {
+  background-color: #e9e9e9;
+}
+
+/* Gaya untuk input yang memiliki autocomplete */
+.autocomplete-input {
+  position: relative;
+}
+
+/* Gaya untuk menghindari overlap dengan elemen lainnya */
+.autocomplete-items {
+  margin-top: 5px;
+}
+
+
+/* DARKMODE */
+[data-theme="dark"] {
+  --background-color: #131416;
+  --text-color: #ffffff;
+  --card-background-color: #2C2D30;
+}
+
+[data-theme="dark"] .add-data-form-container {
+  background-color: var(--background-color);
+}
+
+[data-theme="dark"] .add-data-form-content {
+  background-color: var(--background-color);
+}
+
+[data-theme="dark"] .add-data-form-content h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+[data-theme="dark"] label{
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .input-add {
+  background-color: var(--card-background-color);
+  color: var(--text-color);
+  border: 1px solid var(--card-background-color);
+}
+
+[data-theme="dark"].input-add:focus {
+  border-color: var(--text-color);
+  box-shadow: 0 0 4px #ffffff80;
+  outline: none;
+}
+
+[data-theme="dark"] select {
+  background-color: var(--card-background-color);
+  color: var(--text-color);
+  border: 1px solid var(--card-background-color);
+}
+
+[data-theme="dark"] select:focus {
+  border-color: var(--text-color);
+  box-shadow: 0 0 4px #ffffff80;
+  outline: none;
+}
+
+[data-theme="dark"] .button-add-user button {
+  background-color: #B477D9;
+}
+
+[data-theme="dark"] .button-add-user button:hover {
+  background-color: #9752c2;
+}
+
+[data-theme="dark"] .add-form-password-toggle-button {
+  color: var(--text-color);
+}
+

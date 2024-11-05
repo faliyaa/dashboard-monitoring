@@ -1,0 +1,37 @@
+{
+    "build": {
+        "env": {
+            "PNPM_FLAGS": "--no-frozen-lockfile"
+        }
+    },
+    "rewrites": [
+        {
+            "source": "/login",
+            "destination": "/login"
+        },
+        {
+            "source": "/",
+            "destination": "/register"
+        },
+        {
+            "source": "/dashboard",
+            "destination": "/dashboard"
+        },
+        {
+            "source": "/resetpassword",
+            "destination": "/resetpassword"
+        },
+        {
+            "source": "/verifikasiotp",
+            "destination": "/verifikasiotp"
+        },
+        {
+            "source": "/adduser",
+            "destination": "/adduser"
+        },
+        {
+            "source": "/(.*/)",
+            "destination": "/"
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+.search-result-item {
+    cursor: pointer;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.map-container {
+    right: 17px;
+    margin-top: 15px;
+}
+
+.searchbar-maps {
+    width: 100%;
+    max-width: 100%;
+    /* Atur lebar maksimal sesuai kebutuhan */
+    padding: 10px;
+    border: 2px solid #ccc;
+    /* Warna border */
+    border-radius: 5px;
+    /* Sudut melengkung */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Bayangan halus */
+    font-size: 16px;
+    /* Ukuran font */
+    outline: none;
+    /* Menghilangkan outline default */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    /* Transisi halus */
+}
+
+.searchbar-maps:focus {
+    border-color: #B477D9;
+    outline: none;
+    box-shadow: 0 0 8px #B477D980;
+}
+
+
+/* CSS untuk dropdown menu */
+.dropdown-map {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    max-width: 1010px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    /* Pastikan dropdown di atas elemen lain */
+}
+
+.li-dropdown-map{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.li-dropdown-map:last-child {
+    border-bottom: none;
+}
+
+.li-dropdown-map:hover {
+    background-color: #f0f0f0;
+}
+
+.li-dropdown-map:active {
+    background-color: #e0e0e0;
+}

@@ -1,0 +1,160 @@
+.dashboard-page {
+    margin-left: 250px;
+    margin-top: 60px;
+    gap: 20px;
+}
+
+.chart-wrapper {
+    margin-bottom: 20px;
+    display: block;
+    /* Pastikan wrapper menggunakan display block */
+}
+
+.chart-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #000;
+    /* Warna hitam atau sesuai kebutuhan */
+    text-align: center;
+    /* Atur teks agar berada di tengah */
+}
+
+.dashboard-content {
+    display: flex;
+    /* Mengatur container utama */
+    flex: 1;
+    /* Membiarkan container mengambil sisa ruang */
+    gap: 6rem;
+}
+
+.cards-section {
+    flex: 1;
+    /* Membiarkan cards-section mengambil ruang yang diperlukan */
+}
+
+.charts-section {
+    flex: 1.5;
+    /* Membiarkan charts-section mengambil ruang lebih banyak */
+    width: 50%;
+}
+
+.cards-container {
+    margin-top: 20px;
+    display: flex;
+    width: 112%;
+    height: auto;
+    padding: 20px;
+    border: 1px solid #dedede;
+    border-radius: 15px;
+}
+
+.charts-container {
+    display: flex;
+    flex-direction: column;
+    /* Mengubah arah menjadi kolom */
+}
+
+.age-container,
+.blood-type-container,
+.gender-container {
+    width: 100%;
+    /* Menyesuaikan lebar dengan container */
+    height: 300px;
+    background-color: white;
+    border: 1px solid #DEDEDE;
+    border-radius: 15px;
+    padding: 15px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.income-container {
+    width: 112%;
+    height: 300px;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid #DEDEDE;
+    padding: 15px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.data-gridd-container {
+    width: 112%;
+    /* Menyesuaikan lebar dengan container */
+    height: 391px;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 1px solid #DEDEDE;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cards-data-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 57%;
+    margin-left: 20px;
+}
+
+.map-container {
+    margin-left: 20px;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* DARKMODE */
+[data-theme="dark"] {
+    --background-color: #131416;
+    --text-color: #ffffff;
+    --card-background-color: #2C2D30;
+}
+
+[data-theme="dark"] .cards-container {
+    background-color: var(--card-background-color);
+    border: 1px solid var(--stroke-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .age-container,
+[data-theme="dark"] .blood-type-container,
+[data-theme="dark"] .gender-container,
+[data-theme="dark"] .map-container {
+    background-color: var(--card-background-color);
+    border: 1px solid var(--stroke-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .income-container {
+    background-color: var(--card-background-color);
+    border: 1px solid var(--stroke-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .data-gridd-container {
+    background-color: var(--card-background-color);
+    border: 1px solid var(--stroke-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .dashboard-page {
+    background-color: var(--background-color);
+}
+
+[data-theme="dark"] .chart-title {
+    color: var(--text-color);
+}

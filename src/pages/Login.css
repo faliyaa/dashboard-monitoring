@@ -1,0 +1,255 @@
+.login-form-section {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.login-form-container {
+    width: 70%;
+    height: 80%;
+    max-height: 600px; /* Adjust as needed */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.login-card {
+    flex: 1;
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 2rem;
+    opacity: 0;
+    animation: slideInLeft 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.login-card .logo {
+    width: 40%;
+    margin-left: -40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.login-card h1 {
+    margin-top: 0.75rem;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.login-card p {
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-card label {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.login-card input {
+    margin-bottom: 15px;
+    padding: 12px; /* Padding yang lebih baik */
+    border: 1px solid #dedede; /* Border tambahan */
+    border-radius: 8px; /* Rounded corners yang lebih besar */
+    background-color: #fff;
+    color: #000;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transisi untuk fokus */
+}
+
+.login-card input::placeholder {
+    color: #B3B3B3; /* Placeholder yang lebih cerah */
+}
+
+.login-card input:focus {
+    border-color: #B477D9; /* Warna border saat fokus */
+    outline: none; /* Menghilangkan outline default */
+    box-shadow: 0 0 8px #B477D980; /* Efek bayangan saat fokus */
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #B477D9;
+}
+
+.password-container input {
+    flex: 1;
+    padding-right: 40px;
+    font-size: 14px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-80%);
+    cursor: pointer;
+}
+
+.login-card button {
+    padding: 10px;
+    background-color: #B477D9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s; 
+}
+
+.login-card button:hover {
+    background-color: #995fbd; /* Warna saat hover */
+}
+
+.forgot-password {
+    margin-top: -10px;
+    color: #995fbd; 
+    text-decoration: none;
+    font-size: 13px;
+    text-align: right;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-card .register-page {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.login-card .register-page a {
+    color: #9752c2;
+}
+
+.login-card .register-page a:hover {
+    text-decoration: underline;
+}
+
+.login-illustration {
+    flex: 1;
+    background-color: #B477D9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    color: #fff;
+    border-radius: 10px;
+    opacity: 0;
+    animation: slideInRight 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+    width: 100%;
+    height: 100%;
+}
+
+.login-form-illustration {
+    margin-top: -30px;
+    width: 300px;
+    height: auto;
+}
+
+.login-illustration p {
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+
+@keyframes fadeInSlide {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+
+.login-ellipse-blur {
+    position: absolute;
+    border-radius: 50%;
+    background: #9752c2; /* Warna blur yang sesuai */
+    filter: blur(150px); /* Ukuran blur */
+    opacity: 0.7; /* Kegelapan blur */
+    z-index: 0; /* Di belakang konten utama */
+}
+
+.login-ellipse-blur:nth-child(1) {
+    width: 400px;
+    height: 400px;
+    top: -150px;
+    right: -150px;
+    animation: moveEllipse1 5s infinite alternate;
+}
+
+.login-ellipse-blur:nth-child(2) {
+    width: 400px;
+    height: 400px;
+    bottom: -150px;
+    left: -150px;
+    animation: moveEllipse2 5s infinite alternate;
+}
+
+@keyframes moveEllipse1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(20px, 20px);
+    }
+}
+
+@keyframes moveEllipse2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-20px, -20px);
+    }
+}
+
+[data-theme="dark"] {
+    --background-color: #131416;
+    --text-color: #ffffff;
+    --card-background-color: #2C2D30;
+}
+
+[data-theme="dark"] .login-form-section {
+    background-color: var(--background-color);
+}
+
+[data-theme="dark"] .login-form-container {
+    background-color: var(--card-background-color);
+}

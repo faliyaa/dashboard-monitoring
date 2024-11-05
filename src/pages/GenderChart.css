@@ -1,0 +1,36 @@
+.gender-chart-container {
+    width: 100%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+}
+
+#chartdiv {
+    width: 100%;
+    height: 100%;
+}
+
+.gender-title {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.gender-title-h1{
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+    margin-top: 4px;
+}
+
+/*DARK MODE*/
+[data-theme="dark"] {
+    --background-color: #121225;
+    --text-color: #ffffff;
+    --card-background-color: #2B2C40;
+}
+
+[data-theme="dark"] .gender-title-h1 {
+    color: var(--text-color);
+}
