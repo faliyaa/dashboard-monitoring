@@ -4,6 +4,9 @@ import Swal from 'sweetalert2'; // Import SweetAlert2
 import 'sweetalert2/dist/sweetalert2.min.css'; // Import SweetAlert2 styles
 import "./VerifikasiOtp.css";
 
+import logo from '../../public/img/LogoBaruFix.png';
+import AssetOtp from '../../public/img/otp.gif';
+
 const OtpVerification = () => {
     const [otp, setOtp] = createSignal(['', '', '', '', '', '']);
     const navigate = useNavigate();
@@ -105,7 +108,7 @@ const OtpVerification = () => {
 
             <div class="otp-verification-form-container">
                 <div class="otp-verification-card">
-                    <img src="public/img/LogoBaruFix.png" alt="Logo" class="logo" />
+                    <img src={logo} alt="Logo" class="logo" />
                     <h1>Verifikasi OTP</h1>
                     <p>Masukkan kode OTP 6 digit Anda.</p>
                     <form onSubmit={handleSubmit}>
@@ -127,7 +130,7 @@ const OtpVerification = () => {
                     <p class="back-to-login-page">Kembali ke <a href="/">Register</a></p>
                 </div>
                 <div class="otp-verification-illustration">
-                    <img src="public/img/otp.gif" alt="OTP Verification Illustration" class="otp-verification-form-illustration" />
+                    <img src={AssetOtp} alt="OTP Verification Illustration" class="otp-verification-form-illustration" />
                     <p>Isi kode OTP di atas untuk memverifikasi akun Anda.</p>
                 </div>
             </div>
