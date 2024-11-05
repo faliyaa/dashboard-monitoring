@@ -4,6 +4,7 @@ import "./Navbar.css";
 import DarkMode from "./DarkMode";
 import "./DarkMode.css";
 
+import profil from '../../public/img/user.jpg';
 
 const Navbar: Component = () => {
   const [username, setUsername] = createSignal("User");
@@ -64,7 +65,7 @@ const Navbar: Component = () => {
           <BiSolidBell size={24} class="notif-icon" />
         </div>
         <div class="profile-pic">
-          <img src="public/img/user.jpg" alt="Profile" />
+          <img src={profil} alt="Profile" />
         </div>
       </div>
     </div>
