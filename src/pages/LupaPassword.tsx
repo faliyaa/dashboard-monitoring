@@ -5,6 +5,9 @@ import Swal from 'sweetalert2'; // Import SweetAlert2
 import 'sweetalert2/dist/sweetalert2.min.css'; // Import SweetAlert2 styles
 import "../pages/LupaPassword.css";
 
+import logoforgetpw from "../../public/img/LogoBaruFix.png";
+import forgetpw_asset from "../../public/img/editpasswordasset.gif";
+
 const ForgotPassword = () => {
     const [email, setEmail] = createSignal('');
     const [question, setQuestion] = createSignal('');
@@ -108,7 +111,7 @@ const ForgotPassword = () => {
 
             <div class="forgot-password-form-container">
                 <div class="forgot-password-card">
-                    <img src="public/img/LogoBaruFix.png" alt="Logo" class="logo" />
+                    <img src={logoforgetpw} alt="Logo" class="logo" />
                     <h1>Lupa Password</h1>
                     <p>Masukkan email, pilih pertanyaan keamanan, dan masukkan password baru Anda.</p>
                     <form onSubmit={handleSubmit}>
@@ -161,7 +164,7 @@ const ForgotPassword = () => {
                     <p class="back-to-login-page">Kembali ke <a href="/login">Login</a></p>
                 </div>
                 <div class="forgot-password-illustration">
-                    <img src="public/img/editpasswordasset.gif" alt="Forgot Password Illustration" class="forgot-password-form-illustration" />
+                    <img src={forgetpw_asset} alt="Forgot Password Illustration" class="forgot-password-form-illustration" />
                     <p>Isi formulir di atas untuk mengatur ulang password Anda dan mengakses akun Anda kembali.</p>
                 </div>
             </div>
